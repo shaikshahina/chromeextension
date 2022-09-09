@@ -1,0 +1,40 @@
+
+{
+  "name": "OvalEdge",
+  "manifest_version": 3,
+  "version": "5.2.0",
+  "version_name": "5.2.0",
+  "description": "dummy",
+  "action": {
+    "default_title": "dummy"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["*.html"],
+          "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+  }]
+}
